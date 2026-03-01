@@ -41,10 +41,10 @@ class LandingPage extends StatelessWidget {
                   const Text(
                     "OneRadar",
                     style: TextStyle(
-                      fontFamily: "Absans",
+                      fontFamily: "Outfit",
                       fontSize: 32,
                       fontWeight: FontWeight.w800,
-                      letterSpacing: 4,
+                      letterSpacing: 2,
                       color: CupertinoColors.white,
                     ),
                   ),

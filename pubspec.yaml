@@ -41,6 +41,11 @@ flutter:
       fonts:
         - asset: root/assets/fonts/absans-regular.otf
 
+
+    - family: Outfit
+      fonts:
+        - asset: root/assets/fonts/Outfit-VariableFont_wght.ttf
+
   # To add custom fonts to your application, add a fonts section here.
   # Example:
   #
