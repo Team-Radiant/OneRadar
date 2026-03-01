@@ -57,7 +57,7 @@ class LandingPage extends StatelessWidget {
                   const Text(
                     "Tracking Reinvented",
                     style: TextStyle(
-                      fontFamily: "Absans",
+                      fontFamily: "Outfit",
                       fontSize: 24,
                       fontWeight: FontWeight.w600,
                       color: CupertinoColors.white,
