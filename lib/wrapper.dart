@@ -9,6 +9,7 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isLoggedIn = false;
 
+    // ignore: dead_code
     if (isLoggedIn) {
       return const HomePage();
     } else {
