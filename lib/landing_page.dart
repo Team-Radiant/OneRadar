@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'dart:ui';
+import 'login_page.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -87,7 +88,13 @@ class LandingPage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(vertical: 18),
                       borderRadius: BorderRadius.circular(16),
                       color: const Color.fromARGB(255, 65, 230, 242),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          CupertinoPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                      },
                       child: const Text(
                         "Get Started",
                         style: TextStyle(
