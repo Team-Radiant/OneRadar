@@ -34,14 +34,12 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
-  # The following line ensures that the Material Icons font is included
-  # with your application.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section like this:
-  assets:
-    - assets/images/logo.png
+  fonts:
+    - family: Absans
+      fonts:
+        - asset: root/assets/fonts/absans-regular.otf
 
   # To add custom fonts to your application, add a fonts section here.
   # Example:

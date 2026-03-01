@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'dart:ui';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -6,92 +7,115 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      backgroundColor: CupertinoColors.black,
+      backgroundColor: const Color(0xFF0A0A0A), 
       child: SafeArea(
-        child: Stack(
-          children: [
-
-            // Bottom Dark Section
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.65,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF1C1C1E),
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(40),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Spacer(flex: 2),
+              Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: const Color(0xFF1C1C1E),
+                      boxShadow: [
+                        BoxShadow(
+                          // ignore: deprecated_member_use
+                          color: const Color.fromARGB(255, 102, 255, 242).withOpacity(0.2),
+                          blurRadius: 40,
+                          spreadRadius: 5,
+                        )
+                      ],
+                    ),
+                    child: const Icon(
+                      CupertinoIcons.antenna_radiowaves_left_right,
+                      size: 60,
+                      color: Color.fromARGB(255, 65, 230, 242),
+                    ),
                   ),
-                ),
-                padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 40),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-
-                    const Spacer(),
-
-                    const Text(
-                      "OneRadar",
-                      style: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.w600,
-                        color: CupertinoColors.white,
-                      ),
+                  const SizedBox(height: 40),
+                  const Text(
+                    "OneRadar",
+                    style: TextStyle(
+                      fontFamily: "Absans",
+                      fontSize: 32,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 4,
+                      color: CupertinoColors.white,
                     ),
+                  ),
+                ],
+              ),
 
-                    const SizedBox(height: 12),
-
-                    const Text(
-                      "Student Trip Tracking\nMade Seamless",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: CupertinoColors.systemGrey,
-                      ),
+              const Spacer(),
+              Column(
+                children: [
+                  const Text(
+                    "Tracking Reinvented",
+                    style: TextStyle(
+                      fontFamily: "Absans",
+                      fontSize: 24,
+                      fontWeight: FontWeight.w600,
+                      color: CupertinoColors.white,
                     ),
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    "Real-time student trip monitoring with\nprecision and security you can trust.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: "Absans",
+                      fontSize: 15,
+                      height: 1.5,
+                      fontWeight: FontWeight.w400,
+                      color: CupertinoColors.systemGrey.withValues(alpha: 0.8),
+                    ),
+                  ),
+                ],
+              ),
 
-                    const Spacer(),
-
-                    SizedBox(
-                      width: double.infinity,
-                      child: CupertinoButton(
-                        padding: const EdgeInsets.symmetric(vertical: 16),
-                        borderRadius: BorderRadius.circular(14),
-                        color: const Color(0xFFAF52DE),
-                        onPressed: () {},
-                        child: const Text(
-                          "Continue",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                          ),
+              const Spacer(flex: 2),
+              Column(
+                children: [
+                  SizedBox(
+                    width: double.infinity,
+                    child: CupertinoButton(
+                      padding: const EdgeInsets.symmetric(vertical: 18),
+                      borderRadius: BorderRadius.circular(16),
+                      color: const Color.fromARGB(255, 65, 230, 242),
+                      onPressed: () {},
+                      child: const Text(
+                        "Get Started",
+                        style: TextStyle(
+                          fontFamily: "Absans",
+                          fontSize: 17,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: -0.4,
+                          color: Color.fromARGB(255, 0, 87, 94),
                         ),
                       ),
                     ),
-                  ],
-                ),
-              ),
-            ),
-
-            // Top Light Section
-            Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                height: MediaQuery.of(context).size.height * 0.45,
-                decoration: const BoxDecoration(
-                  color: CupertinoColors.systemBackground,
-                  borderRadius: BorderRadius.vertical(
-                    bottom: Radius.circular(40),
                   ),
-                ),
-                child: Center(
-                  child: Image.asset(
-                    "assets/images/logo.png",
-                    height: 140,
+                  const SizedBox(height: 20),
+                  CupertinoButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Already have an account? Sign In",
+                      style: TextStyle(
+                        fontFamily: "Absans",
+                        fontSize: 14,
+                        color: CupertinoColors.systemGrey2,
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
